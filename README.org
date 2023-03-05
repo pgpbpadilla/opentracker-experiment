@@ -1,0 +1,40 @@
+* OpenTracker setup
+
+  This shows how to configure [[http://erdgeist.org/arts/software/opentracker/][OpenTracker]] using a public Docker image: [[https://github.com/Lednerb/opentracker-docker][opentracker-docker]]
+
+** Create EC2 instance
+
+   1. get a free-tier ec2 with 8gb of memory
+   2. generate the ssh
+      - for existing instance lookup: =opentracker= in 1P
+        
+
+** Install Docker on Amazon Linux
+   
+   1. yum install docker
+   2. sudo amazon-linux-extras install docker
+   3. sudo service docker start
+   4. sudo usermod -a -G docker ec2-user
+   5. sudo chkconfig docker on
+   6. sudo yum install -y git
+   7. sudo reboot
+
+
+** Run OpenTracker on Docker
+   
+   1. docker run -d --name opentracker -p 6969:6969/udp -p 6969:6969 lednerb/opentracker-docker
+   2. docker ps
+   3. sudo yum install nc
+   4. nc -vz hostname 6969
+   5. docker ps
+   6. docker logs -f <container id>
+
+
+** Related
+
+*** Install Docker in Amazon Linux: [[https://gist.github.com/npearce/6f3c7826c7499587f00957fee62f8ee9][github gist]]
+   
+*** opentracker: [[https://erdgeist.org/arts/software/opentracker/][website]]
+
+*** Docker image for opentracker: [[https://github.com/Lednerb/opentracker-docker][github]]
+
