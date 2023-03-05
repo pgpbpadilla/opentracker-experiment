@@ -1,0 +1,3 @@
+[submodule "opentracker-docker"]
+	path = opentracker-docker
+	url = git@github.com:Lednerb/opentracker-docker.git
