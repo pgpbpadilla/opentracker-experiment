@@ -21,6 +21,9 @@
 
 
 ** Run OpenTracker on Docker
+   :PROPERTIES:
+   :ID:       C4CEDA6B-636A-4288-9F28-C6F5CDA8AB42
+   :END:
    
    1. docker run -d --name opentracker -p 6969:6969/udp -p 6969:6969 lednerb/opentracker-docker
    2. docker ps
@@ -30,6 +33,21 @@
    6. docker logs -f <container id>
 
 
+** Creating a torrent GOTCHAS
+
+   1. Create a *public* torrent
+      - although it's our own Torrent tracker, it's still public
+      - set the tracker URL to =http://<instance ip>:6969/announce=
+        + the port needs to match whatever was used when starting the
+          opentracker container, see: [[id:C4CEDA6B-636A-4288-9F28-C6F5CDA8AB42][Run OpenTracker on Docker]]
+   2. Ensure that the shared file is completely downloaded
+      - if it's not, then use the locate files function in your
+        Torrent client
+      - you cannot start seeding until you have fully downloaded the
+        file once
+   3. Generate /Magnet Link/ and share with your friend
+        
+
 ** Related
 
 *** Install Docker in Amazon Linux: [[https://gist.github.com/npearce/6f3c7826c7499587f00957fee62f8ee9][github gist]]
@@ -37,4 +55,6 @@
 *** opentracker: [[https://erdgeist.org/arts/software/opentracker/][website]]
 
 *** Docker image for opentracker: [[https://github.com/Lednerb/opentracker-docker][github]]
+
+*** How to make your own torrents: [[https://www.youtube.com/watch?v=fHrsx7bbVY8&ab_channel=DeAndreQueary][youtube]]
 
