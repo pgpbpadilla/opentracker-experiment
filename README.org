@@ -60,13 +60,8 @@
    :END:
 
    1. =ssh -i opentracker.pem ec2-user@<eip>=: login to ec2 instance
-      Alternative:
-      
-      #+begin_example
-      ssh ot
-      #+end_example
-      
-      Where =ot= is defined in =~/.ssh/config= as follows:
+      Alternatively use: =ssh ot=, where =ot= is defined in
+      =~/.ssh/config= as follows: 
       
       #+begin_quote
       Host ot
