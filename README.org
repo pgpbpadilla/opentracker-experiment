@@ -59,7 +59,22 @@
    :ID:       C4CEDA6B-636A-4288-9F28-C6F5CDA8AB42
    :END:
 
-   1. =ssh -i opentracker.pem ec2-user@<eip>=: login to ec2 instance 
+   1. =ssh -i opentracker.pem ec2-user@<eip>=: login to ec2 instance
+      Alternative:
+      
+      #+begin_example
+      ssh ot
+      #+end_example
+      
+      Where =ot= is defined in =~/.ssh/config= as follows:
+      
+      #+begin_quote
+      Host ot
+      HostName <Instance IP>
+      User ec2-user
+      IdentityFile /path/to/opentracker.pem
+      #+end_quote
+       
    2. =docker container prune=, delete all stopped containers
    3. =sudo service docker start=: start Docker engine
    4. =docker run -d --name opentracker -p 6969:6969/udp -p 6969:6969 lednerb/opentracker-docker=
