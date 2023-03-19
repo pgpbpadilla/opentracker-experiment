@@ -101,6 +101,17 @@
    3. Generate /Magnet Link/ and share with your friend
         
 
+** AWS CLI Gotchas
+
+   
+*** IAM temporary credentials and MFA
+
+    When the user has MFA enabled, it's necessary to generate
+    temporary credentials for programmatic access.
+
+    Reference: [[https://aws.amazon.com/premiumsupport/knowledge-center/authenticate-mfa-cli/][Authenticate MFA CLI]]
+
+    
 ** Related
 
 *** Install Docker in Amazon Linux: [[https://gist.github.com/npearce/6f3c7826c7499587f00957fee62f8ee9][github gist]]
