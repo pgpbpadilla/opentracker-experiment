@@ -104,6 +104,12 @@
 ** AWS CLI Gotchas
 
    
+*** TODO Export temporary credentials
+
+    Is there a way to tell the =awscli= to export the temporary
+    credentials retrieved with =aws sts get-session-token=?
+    
+
 *** IAM temporary credentials and MFA
 
     When the user has MFA enabled, it's necessary to generate
@@ -121,4 +127,8 @@
 *** Docker image for opentracker: [[https://github.com/Lednerb/opentracker-docker][github]]
 
 *** How to make your own torrents: [[https://www.youtube.com/watch?v=fHrsx7bbVY8&ab_channel=DeAndreQueary][youtube]]
+
+*** awscli export-credentials: [[https://awscli.amazonaws.com/v2/documentation/api/latest/reference/configure/export-credentials.html][awscli docs]]
+
+*** AWS temporary credentials: [[https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html#using-temp-creds-sdk-cli][aws docs]]
 
